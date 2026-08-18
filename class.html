@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class Management System</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+        <!-- ========================= Sidebar ========================= -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-mark">L</div>
+        <div class="logo-text">
+          <p>LMS Portal</p>
+          <p>Learning Management</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="sidebar-section-label">Main</p>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="index.html">
+              <span class="nav-icon">🏠</span>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="student.html">
+              <span class="nav-icon">🎓</span>
+              Students
+            </a>
+          </li>
+          <li>
+            <a href="teacher.html">
+              <span class="nav-icon">🧑</span>
+              Teachers
+            </a>
+          </li>
+          <li>
+            <a href="class.html" class="active">
+              <span class="nav-icon">📚</span>
+              Classes
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="avatar">A</div>
+          <div class="user-info">
+            <p>Admin User</p>
+            <p>admin@lms.edu</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========================= Main Container ========================= -->
+    <div class="container">
+      <!-- ========================= Header ========================= -->
+      <div class="header">
+        <div>
+          <p class="subtitle">Class MANAGEMENT</p>
+          <h1>Class Records</h1>
+          <p class="description">Add and manage class information easily.</p>
+        </div>
+
+        <button type="button" class="add-btn" id="openModal">
+          <span>＋</span>
+          Add Class
+        </button>
+      </div>
+
+      <!-- ========================= Table Card ========================= -->
+      <div class="table-card">
+        <div class="table-header">
+          <div>
+            <h2>Classs List</h2>
+            <p>All registered class information</p>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Teacher</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="table">
+              <!-- class data will be added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================= Modal Window ========================= -->
+    <div class="modal" id="exampleModal">
+      <div class="modal-box">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div>
+            <p class="modal-subtitle">NEW RECORD</p>
+            <h2>Add Class Data</h2>
+          </div>
+
+          <button type="button" class="close-btn" id="closeModal">×</button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <div class="input-group">
+            <label for="name">Class Name</label>
+            <input type="text" id="name" placeholder="Enter class name" />
+          </div>
+          <div class="input-group">
+            <label for="teacher">Teacher</label>
+            <input type="text" id="teacher" placeholder="Enter class teacher" />
+          </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="cancel-btn" id="cancelModal">
+            Cancel
+          </button>
+
+          <button type="button" class="save-btn" onclick="saveData()">
+            Save Class
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================= JavaScript ========================= -->
+    <script src="class.js"></script>
+    <script src="global.js"></script>
+  </body>
+</html>

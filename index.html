@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dashboard — LMS Portal</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <!-- ========================= Sidebar ========================= -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="logo-mark">L</div>
+          <div class="logo-text">
+            <p>LMS Portal</p>
+            <p>Learning Management</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="sidebar-section-label">Main</p>
+          <ul class="sidebar-nav">
+            <li>
+              <a href="index.html" class="active">
+                <span class="nav-icon">🏠</span>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="student.html">
+                <span class="nav-icon">🎓</span>
+                Students
+              </a>
+            </li>
+            <li>
+              <a href="teacher.html">
+                <span class="nav-icon">🧑</span>
+                Teachers
+              </a>
+            </li>
+            <li>
+              <a href="class.html">
+                <span class="nav-icon">📚</span>
+                Classes
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="sidebar-user">
+            <div class="avatar">A</div>
+            <div class="user-info">
+              <p>Admin User</p>
+              <p>admin@lms.edu</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ========================= Main Column ========================= -->
+      <div class="main-column">
+        <!-- ========================= Dashboard Content ========================= -->
+        <main class="dashboard-content">
+          <div class="header">
+            <div>
+              <p class="subtitle">OVERVIEW</p>
+              <h1>Welcome back, Admin</h1>
+              <p class="description">
+                Here's what's happening across your school today.
+              </p>
+            </div>
+          </div>
+
+          <!-- ========================= Stat Cards ========================= -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-info">
+                <p class="stat-label">Total Students</p>
+                <p class="stat-value" id="studentCount">0</p>
+              </div>
+              <div class="stat-icon purple">🎓</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-info">
+                <p class="stat-label">Total Teachers</p>
+                <p class="stat-value" id="teacherCount">0</p>
+              </div>
+              <div class="stat-icon green">🧑</div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-info">
+                <p class="stat-label">Total Classes</p>
+                <p class="stat-value" id="classCount">0</p>
+              </div>
+              <div class="stat-icon orange">📚</div>
+            </div>
+          </div>
+
+          <!-- ========================= Content Grid ========================= -->
+          <div class="content-grid">
+            <!-- Recent Records Panel -->
+            <div class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Recent Students</h2>
+                  <p>Latest additions to the student list</p>
+                </div>
+                <a href="index.html" class="panel-link">View all</a>
+              </div>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Education</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        colspan="4"
+                        style="
+                          text-align: center;
+                          color: #8992a5;
+                          padding: 30px 25px;
+                        "
+                      >
+                        No students added yet. Head to the Students page to add
+                        one.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Recent Teacher Records Panel -->
+            <div class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Recent Teachers</h2>
+                  <p>Latest additions to the teacher list</p>
+                </div>
+                <a href="teacher.html" class="panel-link">View all</a>
+              </div>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Education</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        colspan="4"
+                        style="
+                          text-align: center;
+                          color: #8992a5;
+                          padding: 30px 25px;
+                        "
+                      >
+                        No teachers added yet. Head to the Teachers page to add
+                        one.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- Recent Class Records Panel -->
+            <div class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Recent Classes</h2>
+                  <p>Latest additions to the class list</p>
+                </div>
+                <a href="class.html" class="panel-link">View all</a>
+              </div>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Teacher</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        colspan="4"
+                        style="
+                          text-align: center;
+                          color: #8992a5;
+                          padding: 30px 25px;
+                        "
+                      ></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      var studentCount = document.getElementById("studentCount");
+      var teacherCount = document.getElementById("teacherCount");
+      var classCount = document.getElementById("classCount");
+
+      var teacherGetData = JSON.parse(localStorage.getItem("teacherData"));
+      var studentGetData = JSON.parse(localStorage.getItem("studentData"));
+      var classGetData = JSON.parse(localStorage.getItem("classData"));
+
+      teacherCount.innerHTML = teacherGetData.length;
+      studentCount.innerHTML = studentGetData.length;
+      classCount.innerHTML = classGetData.length;
+    </script>
+  </body>
+</html>
